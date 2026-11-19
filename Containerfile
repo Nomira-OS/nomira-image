@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
 #
 # nomira base image: the smallest Arch Linux that bootc can boot, plus the
 # tools to build and switch to nomira images on the machine itself.
@@ -12,7 +12,7 @@
 
 # `base` is a moving tag; Renovate pins it to a digest. The package state
 # does not depend on it, because the base stage syncs to SNAPSHOT.
-ARG ARCH_IMAGE=docker.io/archlinux/archlinux:base
+ARG ARCH_IMAGE=docker.io/archlinux/archlinux:base@sha256:bad9bb972e3a100f9b3130277c60166146fe0f10ca023868823ebc47a094ced1
 
 # --- base: Arch synced to the archive snapshot ------------------------------
 FROM ${ARCH_IMAGE} AS base

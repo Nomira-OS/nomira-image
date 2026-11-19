@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   checks:
-    uses: Nomira-OS/ci/.github/workflows/checks.yml@main
+    uses: Nomira-OS/ci/.github/workflows/checks.yml@9e5c8d3fe6f8c565dcee900f81fc05ac50b3b873 # main
 
   versions:
     runs-on: ubuntu-26.04
@@ -48,7 +48,7 @@ jobs:
       attestations: write
       security-events: write
       actions: read
-    uses: Nomira-OS/ci/.github/workflows/image.yml@main
+    uses: Nomira-OS/ci/.github/workflows/image.yml@9e5c8d3fe6f8c565dcee900f81fc05ac50b3b873 # main
     with:
       image: ghcr.io/nomira-os/nomira-image
       build-args: ${{ needs.versions.outputs.build-args }}
